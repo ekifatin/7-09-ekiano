@@ -17,15 +17,20 @@ use Illuminate\Support\Facades\Route;
     return view('welcome');
 });*/
 Route::get('/', function(){
-    return view ('Home');
+    return view ('Home', [
+        "title" => "Home"
+    ]);
 });
 Route::get('/about', function(){
     return view ('About',[
+        "title" => "About",
         "nama" =>"Ekiano AGryan Fathin",
         "email" => "3103120074@student.smktelkom-pwt.sch.id",
-        "gambar" => "tamako.jpeg"
+        "gambar" => "eki.jpeg"
     ]);
 });
 Route::get('/gallery', function(){
-    return view ('Gallery');
+    return view ('Gallery', [
+        "title" => "Gallery"
+    ]);
 });
